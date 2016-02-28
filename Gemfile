@@ -37,6 +37,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :test do
   #Custom gems
   gem 'capybara', '~> 2.6', '>= 2.6.2'
+  gem 'shoulda-matchers', '~> 3.1.1'
 end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
