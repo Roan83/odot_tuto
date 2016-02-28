@@ -12,7 +12,7 @@ RSpec.describe TodoItem, type: :model do
       expect(todo_item.completed?).to be false
     end
 
-    it "ireturn true when completed_at is not empty" do
+    it "return true when completed_at is not empty" do
       todo_item.completed_at = Time.now
       expect(todo_item.completed?).to be true
     end
