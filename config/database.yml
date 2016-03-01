@@ -82,4 +82,4 @@ production:
   <<: *default
   database: odot_production
   username: odot
-  password: <%= ENV['ODOT_DATABASE_PASSWORD'] %>
+  password: efficy123
