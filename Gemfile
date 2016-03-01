@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby "2.3.0"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use postgresql as the database for Active Record
@@ -33,11 +33,16 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 #Custom gems
-
+gem 'foundation-rails', '~> 6.1', '>= 6.1.2.0'
+gem 'font-awesome-rails', '~> 4.5', '>= 4.5.0.1'
+gem 'high_voltage', '~> 2.4'
+gem 'bcrypt', '~> 3.1', '>= 3.1.10'
+gem 'modernizr-rails', '~> 2.7', '>= 2.7.1'
 group :test do
   #Custom gems
   gem 'capybara', '~> 2.6', '>= 2.6.2'
   gem 'shoulda-matchers', '~> 3.1.1'
+  #gem 'rspec-active_record_mocks', '~> 1.2', '>= 1.2.1'
 end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -45,6 +50,10 @@ group :development, :test do
   
   #Custom gems
   gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
+  #gem 'rspec-rails', '~> 2.0'
+  gem 'rspec-active_record_mocks', '~> 1.2', '>= 1.2.1'
+  gem 'rspec-activemodel-mocks'
+  gem 'factory_girl_rails', '~> 4.6'
 end
 
 group :development do

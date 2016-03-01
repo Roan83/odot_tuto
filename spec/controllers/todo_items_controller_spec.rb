@@ -1,6 +1,6 @@
 require 'rails_helper'
+require 'spec_helper'
 
-RSpec.describe TodoItemsController, type: :controller do
+describe TodoItemsController do
 
-  
 end

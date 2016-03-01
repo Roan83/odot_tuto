@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'spec_helper'
 
 RSpec.describe "TodoLists", type: :request do
   describe "GET /todo_lists" do

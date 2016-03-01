@@ -1,5 +1,6 @@
 require 'rails_helper'
+require 'spec_helper'
 
-RSpec.describe "pages/home.html.erb", type: :view do
+describe "pages/home.html.erb" do
   pending "add some examples to (or delete) #{__FILE__}"
 end

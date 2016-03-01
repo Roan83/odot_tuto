@@ -1,22 +1,23 @@
 require 'rails_helper'
 
-RSpec.describe "todo_lists/index", type: :view do
+describe "todo_lists/index" do
   before(:each) do
     assign(:todo_lists, [
-      TodoList.create!(
-        :title => "Title",
-        :description => "MyText"
+      stub_model(TodoList,
+        :title => "Title"
       ),
-      TodoList.create!(
-        :title => "Title",
-        :description => "MyText"
+      stub_model(TodoList,
+        :title => "Title"
       )
     ])
   end
 
   it "renders a list of todo_lists" do
+    #stub_template "todo_lists/_todo_list.html.erb" => "<%= todo_list.todo_items.size %><br/>"
+    #render 
     render
-    assert_select "tr>td", :text => "Title".to_s, :count => 2
-    assert_select "tr>td", :text => "MyText".to_s, :count => 2
+    # Run the generator again with the --webrat flag if you want to use webrat matchers
+    #expect(page("ul.todo-lists li div")).to :text => "Title".to_s, :count => 2 
+    assert_select "ul.todo-lists li div", { :text => "Title".to_s, :count => 2 }
   end
 end

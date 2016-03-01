@@ -1,16 +1,16 @@
 require 'rails_helper'
+require 'spec_helper'
 
-RSpec.describe "todo_lists/show", type: :view do
+describe "todo_lists/show" do
   before(:each) do
-    @todo_list = assign(:todo_list, TodoList.create!(
-      :title => "Title",
-      :description => "MyText"
+    @todo_list = assign(:todo_list, mock_model(TodoList,
+      :title => "Title"
     ))
   end
 
   it "renders attributes in <p>" do
     render
-    expect(rendered).to match(/Title/)
-    expect(rendered).to match(/MyText/)
+    # Run the generator again with the --webrat flag if you want to use webrat matchers
+    rendered.should match(/Title/)
   end
 end
